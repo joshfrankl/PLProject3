@@ -7,7 +7,7 @@ $(document).ready(function() {
     });
 
     // set up event handlers for links
-    $("#image_list a").click(function(evt) {
+    $("#image_list a").click(function(evt) { // Link clicked
         // swap image
         var imageURL = $(this).attr("href");
         $("#image").attr("src", imageURL);

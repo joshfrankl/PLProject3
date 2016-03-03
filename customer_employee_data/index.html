@@ -2,9 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script type=""text/javascript" src="Person.js"></script>
-    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="Person.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>PersonApp</title>
 </head>
 <body>
+<h1 align="center">Welcome to the Person Tester application</h1>
+<br />
+
+<div>
+    <label for="choose_customer_employee_type">Create customer or employee? (c/e):</label>
+    <input type="text" id="choose_customer_employee_type">
+    <span id="customer_employee_error">*</span>
+    <br />
+    <br />
+    <input type="button" id="create_person_button" value="Create Person">
+    <br />
+    <br />
+</div>
+
+<div id="customer" class="hide">
+    <label>Enter first name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" id="customer_first_name">
+    <span id="customer_first_name_error">*</span>
+    <br />
+    <br />
+    <label>Enter last name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" id="customer_last_name">
+    <span id="customer_last_name_error">*</span>
+    <br />
+    <br />
+    <label>Enter email address:</label>
+    <input type="text" id="customer_email_address">
+    <span id="customer_email_address_error">*</span>
+    <br />
+    <br />
+    <label>Customer number:&nbsp;&nbsp;</label>
+    <input type="text" id="customer_number">
+    <span id="customer_number_error">*</span>
+    <br />
+    <br />
+    <input type="button" id="create_customer_button" value="Create Customer">
+</div>
+
+<div id="employee" class = "hide">
+    <label>Enter first name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" id="employee_first_name">
+    <span id="employee_first_name_error">*</span>
+    <br />
+    <br />
+    <label>Enter last name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" id="employee_last_name">
+    <span id="employee_last_name_error">*</span>
+    <br />
+    <br />
+    <label>Enter email address:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" id="employee_email_address">
+    <span id="employee_email_address_error">*</span>
+    <br />
+    <br />
+    <label>Social security number:</label>
+    <input type="text" id="employee_ssn">
+    <span id="employee_ssn_error">*</span>
+    <br />
+    <br />
+    <input type="button" id="create_employee_button" value="Create Employee">
+</div>
+
 </body>
 </html>
