@@ -107,6 +107,12 @@ $(document).ready(function() {
 
         else { // Something entered other than "c", "C", "e", or "E"
             $("#customer_employee_error").text("Error: please enter 'e' or 'c'.");
+            if ($("#employee").hasClass("hide") != true){
+                $("#employee").toggleClass("hide"); // Make sure Employee interface is hidden if incorrect type entered
+            }
+            if ($("#customer").hasClass("hide") != true){
+                $("#customer").toggleClass("hide"); // Make sure Customer interface is hidden if incorrect type entered
+            }
         }
 
         // Each time a new selection is made, clear the textboxes
@@ -178,6 +184,8 @@ $(document).ready(function() {
             $("#customer_last_name").val("");
             $("#customer_email_address").val("");
             $("#customer_number").val("");
+            $("#customer").toggleClass("hide"); // Hide Customer interface after each input
+            $("#choose_customer_employee_type").val("");
         }
     }) // End of "Create Customer" click function
 
@@ -238,6 +246,8 @@ $(document).ready(function() {
             $("#employee_last_name").val("");
             $("#employee_email_address").val("");
             $("#employee_ssn").val("");
+            $("#employee").toggleClass("hide"); // Hide Employee interface after each input
+            $("#choose_customer_employee_type").val("");
         }
     }) // End of "Create Employee" click function
 }) // End of "ready" function
